@@ -64,9 +64,6 @@ namespace MVCApp.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            //TODO :getbyid from repo
-            //create viewmodel for edit 
-            //pass viewmodel into view then in cshtml use @Model.
             var person = _personRepo.GetPersonById(id);
             return View(person);
         }
